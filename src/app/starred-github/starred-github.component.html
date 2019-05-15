@@ -1,0 +1,27 @@
+
+
+<div class="div0" *ngFor="let l of listItems?.items">
+
+     <img src="{{l.owner.avatar_url}}" class="avatar">
+
+       <div class="div1">
+         <p> {{l.name}}<br>{{l.description}}</p>
+           <div class="div2">Stars: {{l.stargazers_count}}
+           </div>
+             <div class="div3">Issues: {{l.open_issues_count}}
+             </div>
+
+
+        </div>
+</div>
+
+<div class="main-panel">
+  <div
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+
+    (scrolled)="onScroll()"
+  ></div>
+</div>
+
